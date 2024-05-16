@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://iiflinsurance.com/images/best-investment-options-for-students-in-india-2021.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            .card {
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .card {
+                max-width: 30%;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Status</h1>
+    {% for i in details %}
+    <div class="card">
+        <label>Email</label>
+        <p>{{i[2]}}</p>
+        <label>Problem</label>
+        <p>{{i[3]}}</p>
+        <label>Categorie</label>
+        <p>{{i[7]}}</p>
+        <h1>Status: {{i[6]}}</h1>
+    </div>
+    {% endfor %}
+</body>
+</html>

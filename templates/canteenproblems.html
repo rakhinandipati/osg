@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url('https://www.milnbank.org.uk/wp-content/uploads/2023/08/Artboard-68.png');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Results {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.9); /* Lighter background */
+      padding: 28px;
+      margin: 0 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-title {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      color: #333; /* Dark text color */
+      margin-bottom: 20px;
+    }
+
+    .user-input-box {
+      margin-bottom: 20px;
+    }
+
+    .user-input-box label {
+      color: #333; /* Dark label text color */
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .user-input-box input,
+    .user-input-box textarea,
+    .user-input-box select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #333; /* Dark text color */
+      font-size: 16px;
+    }
+
+    .user-input-box select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+      background-position: right 10px center;
+      background-repeat: no-repeat;
+      padding-right: 30px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="Results">
+    <br><br><br><br><br><br>
+    <h1 class="form-title">Complaint Form</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <div class="user-input-box">
+        <label>Email</label>
+        <input type="email" name="email" required/>
+      </div>
+      <div class="user-input-box">
+        <label>Problem</label>
+        <textarea rows="4" name="problem" required></textarea>
+      </div>
+      <div class="user-input-box">
+        <label>Address</label>
+        <textarea rows="4" name="address" required></textarea>
+      </div>
+      <div class="user-input-box">
+        <label>Image</label>
+        <input type="file" name="image">
+      </div>
+      <div class="user-input-box">
+        <label>Categorie</label>
+        <select name="categorie">
+          <option>Canteen problems</option>
+        </select>
+      </div>
+      <button type="submit" class="form-submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
